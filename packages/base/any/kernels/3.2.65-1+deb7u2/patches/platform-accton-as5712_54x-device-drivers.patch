@@ -866,11 +866,25 @@ index 0000000..6381db5
 +#include <linux/dmi.h>
 +
 +static struct dmi_system_id as5712_dmi_table[] = {
++       // match 'Accton' in either SYSTEM or BOARD vendor field
++    {
++        .ident = "Accton AS5712",
++        .matches = {
++            DMI_MATCH(DMI_SYS_VENDOR, "Accton"),
++            DMI_MATCH(DMI_PRODUCT_NAME, "AS5712"),
++        },
++    },
 +    {
 +        .ident = "Accton AS5712",
 +        .matches = {
 +            DMI_MATCH(DMI_BOARD_VENDOR, "Accton"),
 +            DMI_MATCH(DMI_PRODUCT_NAME, "AS5712"),
++        },
++    },
++    {
++        .ident = "End of list",
++        .matches = {
++           DMI_NONE,
 +        },
 +    }
 +};
