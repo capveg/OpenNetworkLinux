@@ -16,3 +16,6 @@
 [submodule "packages/platforms-closed"]
 	path = packages/platforms-closed
 	url = git@github.com:opennetworklinux/platforms-closed
+[submodule "packages/opennsl-closed"]
+	path = packages/opennsl-closed
+	url = git@github.com:OpenNetworkLinux/opennsl-closed
