@@ -1,0 +1,21 @@
+#prerequisites:
+#   #packages: [ "onlp:$ARCH", "opennsl:$ARCH" ]
+
+common:
+  arch: $ARCH
+  version: 1.0.0
+  copyright: Copyright 2016 Big Switch Networks
+  maintainer: rob.sherwood@bigswitch.com
+
+packages:
+  - name: opennsl-snake
+    version: 1.0.0
+    summary: "Set up ports to L1 forward like a snake: in one port and out another"
+
+    files:
+      builds/${TOOLCHAIN}/bin/opennsl-snake: /usr/bin/opennsl-snake
+
+
+    changelog:  Initial version.
+
+
